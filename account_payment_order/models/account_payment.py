@@ -94,5 +94,6 @@ class AccountPayment(models.Model):
         if not self.payment_order_id:
             return vals_list
         for vals in vals_list:
-            vals["date_maturity"] = self.payment_line_ids[0].date
+            if self.payment_line_ids:
+                vals["date_maturity"] = self.payment_line_ids[0].date
         return vals_list
