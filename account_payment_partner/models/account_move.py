@@ -127,6 +127,7 @@ class AccountMove(models.Model):
     @api.depends("line_ids.matched_credit_ids", "line_ids.matched_debit_ids")
     def _compute_has_reconciled_items(self):
         for record in self:
+            record.has_reconciled_items=False
             """lines_to_consider = record.line_ids.filtered(
                 lambda x: x.account_id.account_type
                 in ("asset_receivable", "liability_payable")
