@@ -35,7 +35,7 @@
                 <field name="payment_mode_filter_type_domain" invisible="1" />
                 <field name="partner_bank_filter_type_domain" invisible="1" />
             </field>
-            <xpath
+           <!--  <xpath
                 expr="//group[@id='header_right_group']//field[@name='partner_bank_id']"
                 position="attributes"
             >
@@ -51,7 +51,7 @@
                     'readonly': [('state', '!=', 'draft')],
                     'invisible': [('move_type', 'not in', ('in_invoice', 'in_refund', 'in_receipt'))]}
                 </attribute>
-            </xpath>
+            </xpath> -->
             <xpath
                 expr="//page[@id='other_tab']//field[@name='partner_bank_id']"
                 position="attributes"
