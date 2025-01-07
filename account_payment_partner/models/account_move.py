@@ -131,7 +131,7 @@ class AccountMove(models.Model):
                 lambda x: x.account_id.account_type
                 in ("asset_receivable", "liability_payable")
             )
-            """record.has_reconciled_items = bool(
+            record.has_reconciled_items = bool(
                 lines_to_consider.matched_credit_ids
                 + lines_to_consider.matched_debit_ids
             )"""
